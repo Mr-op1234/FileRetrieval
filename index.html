@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonMerge - Cyberpunk PDF Merger</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-glow"></div>
+                <h1><span class="neon-text">NEON</span>MERGE</h1>
+            </div>
+            <div class="tagline">
+                <p>QUANTUM PDF FUSION SYSTEM</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-container" id="drop-area">
+                    <div class="upload-icon">
+                        <i class="fas fa-file-upload"></i>
+                    </div>
+                    <h2>UPLOAD FILES</h2>
+                    <p>Drag & drop PDFs here or click to browse</p>
+                    <input type="file" id="file-input" multiple accept="application/pdf" class="hidden">
+                </div>
+                <div class="upload-stats">
+                    <div class="stat">
+                        <span id="file-count">0</span>
+                        <p>FILES</p>
+                    </div>
+                    <div class="stat">
+                        <span id="total-size">0 KB</span>
+                        <p>TOTAL SIZE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="file-list-container hidden" id="file-list-section">
+                <h2>FILE SEQUENCE</h2>
+                <p class="instruction">Drag to reorder files before merging</p>
+                <ul id="file-list" class="file-list"></ul>
+                
+                <div class="action-buttons">
+                    <button type="button" id="merge-btn" class="cyber-button">
+                        <span class="cyber-button-text">MERGE FILES</span>
+                        <span class="cyber-button-glitch"></span>
+                    </button>
+                    <button type="button" id="clear-btn" class="cyber-button secondary">
+                        <span class="cyber-button-text">CLEAR ALL</span>
+                        <span class="cyber-button-glitch"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="result-section hidden" id="result-section">
+                <div class="result-container">
+                    <h2>MERGE COMPLETE</h2>
+                    <div class="result-animation">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="download-container">
+                        <button type="button" id="download-btn" class="cyber-button">
+                            <span class="cyber-button-text">DOWNLOAD PDF</span>
+                            <span class="cyber-button-glitch"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="progress-container hidden" id="progress-container">
+                <div class="progress-text">MERGING FILES...</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-percentage" id="progress-percentage">0%</div>
+            </div>
+            <p class="footer-text">NEONMERGE v1.0 | QUANTUM PDF TECHNOLOGY</p>
+        </footer>
+    </div>
+
+    <div class="background-grid"></div>
+    <div class="background-glow"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
